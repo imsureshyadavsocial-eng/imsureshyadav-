@@ -4,375 +4,681 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#14243b">
-  <title>Social Media Management | Suresh Yadav</title>
-  <meta name="description" content="Social media content planning, campaign concepts and Instagram design portfolio by Suresh Yadav.">
+  <meta name="description" content="Social Media Management portfolio by Suresh Yadav. Explore content calendars, Instagram feed designs, Stories campaigns and performance reporting concepts.">
+  <title>Social Media Portfolio | Suresh Yadav</title>
+
+  <link rel="stylesheet" href="assets/style.css">
 
   <style>
     :root {
-      --navy: #14243b;
-      --orange: #e65c32;
-      --cream: #f5f1e8;
-      --white: #ffffff;
-      --muted: #687080;
-      --line: #ded9ce;
+      --sm-bg: #f5f1e8;
+      --sm-ink: #14243b;
+      --sm-accent: #e65c32;
+      --sm-muted: #687386;
+      --sm-card: #ffffff;
+      --sm-border: #e1ded6;
     }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--navy);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+    .sm-page {
+      background: var(--sm-bg);
+      color: var(--sm-ink);
+      min-height: 100vh;
     }
 
-    a { color: inherit; }
-
-    .wrap {
-      width: min(1120px, 90%);
-      margin: auto;
+    .sm-container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
     }
 
-    header {
-      background: var(--cream);
-      border-bottom: 1px solid var(--line);
+    .sm-hero {
+      padding: 76px 0 50px;
     }
 
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      font-size: 19px;
-      font-weight: 900;
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-
-    .brand span { color: var(--orange); }
-
-    .navlinks {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .navlinks a {
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .navlinks a:hover { color: var(--orange); }
-
-    .hero {
-      padding: 76px 0 56px;
-    }
-
-    .eyebrow {
-      color: var(--orange);
+    .sm-eyebrow {
+      color: var(--sm-accent);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
-    h1 {
-      max-width: 850px;
-      margin: 14px 0;
+    .sm-hero h1 {
+      max-width: 800px;
       font-size: clamp(38px, 7vw, 76px);
       line-height: 1.02;
-      letter-spacing: -3px;
+      letter-spacing: -2px;
+      margin: 0 0 22px;
+      color: var(--sm-ink);
     }
 
-    .hero p {
+    .sm-hero h1 span {
+      color: var(--sm-accent);
+    }
+
+    .sm-intro {
       max-width: 680px;
-      color: var(--muted);
       font-size: 17px;
+      line-height: 1.8;
+      color: var(--sm-muted);
+      margin: 0;
     }
 
-    .section-title {
+    .sm-info {
+      margin-top: 30px;
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sm-pill {
+      border: 1px solid var(--sm-border);
+      border-radius: 999px;
+      padding: 10px 15px;
+      background: rgba(255,255,255,.65);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .sm-project-section {
+      padding: 22px 0 85px;
+    }
+
+    .sm-section-heading {
+      display: flex;
       align-items: end;
+      justify-content: space-between;
       gap: 20px;
-      margin: 20px 0 26px;
+      margin-bottom: 28px;
     }
 
-    h2 {
-      margin: 0;
-      font-size: clamp(26px, 4vw, 38px);
+    .sm-section-heading h2 {
+      font-size: clamp(27px, 4vw, 38px);
       line-height: 1.15;
+      margin: 0 0 9px;
+      color: var(--sm-ink);
     }
 
-    .section-title p {
+    .sm-section-heading p {
+      color: var(--sm-muted);
+      line-height: 1.6;
       margin: 0;
-      color: var(--muted);
+    }
+
+    .sm-count {
+      white-space: nowrap;
+      color: var(--sm-accent);
+      font-weight: 800;
       font-size: 13px;
     }
 
-    .projects {
+    .sm-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-      padding-bottom: 76px;
+      gap: 24px;
     }
 
-    .project {
+    .sm-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: var(--sm-card);
+      border: 1px solid var(--sm-border);
+      border-radius: 20px;
       overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 18px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 8px 24px rgba(20,36,59,.045);
       transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    .project:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px #14243b12;
+    .sm-card:hover,
+    .sm-card:focus-visible {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(20,36,59,.12);
+      outline: 2px solid var(--sm-accent);
+      outline-offset: 3px;
     }
 
-    .cover {
-      display: block;
-      width: 100%;
+    .sm-cover {
+      position: relative;
+      min-height: 250px;
       aspect-ratio: 16 / 10;
-      object-fit: cover;
-      background: #e7e4dd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      overflow: hidden;
+      background: var(--sm-ink);
+      color: white;
     }
 
-    .project-body { padding: 24px; }
+    .sm-cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
-    .tag {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 5px;
-      background: #fce6de;
-      color: #a83d1e;
-      font-size: 10px;
+    .sm-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(9,17,29,.12) 0%,
+        rgba(9,17,29,.25) 35%,
+        rgba(9,17,29,.92) 100%
+      );
+      pointer-events: none;
+    }
+
+    .sm-cover-top,
+    .sm-cover-title {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sm-cover-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .sm-brand {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+
+    .sm-number {
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: 1px;
+      padding: 8px 11px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.15);
+      backdrop-filter: blur(6px);
+    }
+
+    .sm-cover-title small {
+      display: block;
+      color: #dce4ed;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    .sm-cover-title h3 {
+      color: white;
+      font-size: clamp(24px, 3.5vw, 36px);
+      line-height: 1.08;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .sm-cover-title h3 span {
+      color: #d8ff46;
+    }
+
+    .sm-cover-no-image {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(230,92,50,.6), transparent 36%),
+        linear-gradient(135deg, #14243b, #263e5b 60%, #0d1521);
+    }
+
+    .sm-cover-no-image .sm-abstract {
+      position: absolute;
+      right: 22px;
+      top: 65px;
+      width: 140px;
+      height: 140px;
+      border: 2px solid rgba(255,255,255,.25);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 18px rgba(255,255,255,.04),
+        0 0 0 38px rgba(255,255,255,.035);
+    }
+
+    .sm-cover-no-image .sm-abstract::after {
+      content: "";
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background: var(--sm-accent);
+      border-radius: 18px;
+      transform: rotate(18deg);
+      top: 30px;
+      left: 30px;
+    }
+
+    .sm-card-body {
+      padding: 24px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .sm-category {
+      color: var(--sm-accent);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+
+    .sm-card-body h3 {
+      color: var(--sm-ink);
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 0 0 11px;
+    }
+
+    .sm-card-body p {
+      color: var(--sm-muted);
+      font-size: 14px;
+      line-height: 1.75;
+      margin: 0 0 22px;
+    }
+
+    .sm-card-bottom {
+      margin-top: auto;
+      padding-top: 17px;
+      border-top: 1px solid var(--sm-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sm-status {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      color: #526176;
       text-transform: uppercase;
     }
 
-    h3 {
-      margin: 13px 0 8px;
-      font-size: 24px;
-      line-height: 1.2;
-    }
-
-    .project-body p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .button {
+    .sm-open {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 12px 17px;
-      border: 0;
-      border-radius: 8px;
-      background: var(--navy);
-      color: var(--white);
+      gap: 8px;
+      color: var(--sm-accent);
       font-size: 13px;
-      font-weight: 800;
-      text-decoration: none;
+      font-weight: 900;
     }
 
-    .button:hover { background: var(--orange); }
+    .sm-open span {
+      font-size: 19px;
+      transition: transform .2s ease;
+    }
 
-    .coming {
+    .sm-card:hover .sm-open span {
+      transform: translateX(4px);
+    }
+
+    .sm-note {
+      margin-top: 32px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--sm-accent);
+      border-radius: 0 12px 12px 0;
+      background: rgba(255,255,255,.7);
+      color: var(--sm-muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .sm-note strong {
+      color: var(--sm-ink);
+    }
+
+    .sm-cta {
+      margin: 0 0 80px;
+      border-radius: 22px;
+      background: var(--sm-ink);
+      color: white;
+      padding: clamp(25px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .sm-cta h2 {
+      color: white;
+      font-size: clamp(24px, 4vw, 34px);
+      margin: 0 0 10px;
+    }
+
+    .sm-cta p {
+      color: #d0d7e1;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .sm-cta a {
+      flex-shrink: 0;
       display: inline-block;
-      padding: 10px 0;
-      color: var(--muted);
-      font-size: 12px;
+      background: var(--sm-accent);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-decoration: none;
       font-weight: 800;
-    }
-
-    .notice {
-      margin: 0 0 70px;
-      padding: 22px;
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
-      background: #ffffffa6;
-      color: var(--muted);
       font-size: 13px;
     }
 
-    footer {
-      padding: 26px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
+    .sm-footer {
+      border-top: 1px solid var(--sm-border);
+      padding: 25px 0;
+      color: var(--sm-muted);
       font-size: 12px;
     }
 
-    .footer-inner {
+    .sm-footer-inner {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
     }
 
-    @media (max-width: 700px) {
-      .nav {
-        padding: 16px 0;
+    @media (max-width: 680px) {
+      .sm-hero {
+        padding-top: 48px;
+      }
+
+      .sm-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sm-cover {
+        min-height: 230px;
+      }
+
+      .sm-section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .sm-cta {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .navlinks { gap: 12px; }
-
-      .hero { padding: 52px 0 38px; }
-
-      h1 { letter-spacing: -1.5px; }
-
-      .section-title {
-        align-items: flex-start;
-        flex-direction: column;
+      .sm-cta a {
+        width: 100%;
+        text-align: center;
       }
 
-      .projects { grid-template-columns: 1fr; }
+      .sm-card-body {
+        padding: 21px;
+      }
+    }
 
-      .project-body { padding: 20px; }
+    @media (prefers-reduced-motion: reduce) {
+      .sm-card,
+      .sm-open span {
+        transition: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html">SURESH <span>YADAV.</span></a>
-      <nav class="navlinks" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="graphic-design.html">Graphic Design</a>
-        <a href="social-media.html">Social Media</a>
-        <a href="content-writing.html">Content Writing</a>
-        <a href="b2b-lead-generation.html">B2B Leads</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="sm-page">
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Portfolio / Social Media Management</div>
-      <h1>Social content.<br>Built with purpose.</h1>
-      <p>
-        Instagram content concepts, campaign planning, content calendars
-        and visual storytelling designed to help brands communicate clearly
-        and consistently.
+    <!-- HEADER -->
+    <header class="sm-container sm-hero">
+      <div class="sm-eyebrow">Selected Work / Social Media Management</div>
+
+      <h1>
+        Social media that<br>
+        <span>connects and converts.</span>
+      </h1>
+
+      <p class="sm-intro">
+        A collection of social media portfolio concepts covering content
+        planning, Instagram feed design, Stories campaigns and performance
+        reporting. Each project demonstrates a different part of the workflow.
       </p>
-    </section>
 
-    <section aria-labelledby="projects-heading">
-      <div class="section-title">
-        <h2 id="projects-heading">Selected Projects</h2>
-        <p>Content strategy · Campaign concepts · Instagram design</p>
+      <div class="sm-info">
+        <span class="sm-pill">Content Strategy</span>
+        <span class="sm-pill">Instagram Design</span>
+        <span class="sm-pill">Stories Campaigns</span>
+        <span class="sm-pill">Performance Reporting</span>
+      </div>
+    </header>
+
+    <!-- ALL FIVE PROJECTS -->
+    <main class="sm-container sm-project-section">
+
+      <div class="sm-section-heading">
+        <div>
+          <h2>Social Media Projects</h2>
+          <p>Select any project card to explore its individual slides.</p>
+        </div>
+        <div class="sm-count">05 PROJECTS</div>
       </div>
 
-      <div class="projects">
+      <div class="sm-grid">
 
         <!-- PROJECT 01 -->
-        <article class="project">
-          <a href="social-media-project-01.html"
-             aria-label="View Project 01: 7-Day Instagram Content Calendar">
+        <a class="sm-card" href="social-media-project-01.html"
+           aria-label="Open Project 01: 7-Day Instagram Content Calendar">
+          <div class="sm-cover">
             <img
-              class="cover"
               src="assets/assets/social-media/project-01-content-calendar/01-cover.png"
-              alt="Volt Athletics 7-Day Instagram Content Calendar cover"
+              alt="Northframe Studio 7-Day Instagram Content Calendar cover"
               loading="lazy"
               onerror="this.style.display='none'">
-          </a>
-          <div class="project-body">
-            <span class="tag">Project 01 · Content Planning</span>
+
+            <div class="sm-cover-top">
+              <span class="sm-brand">NORTHFRAME STUDIO</span>
+              <span class="sm-number">PROJECT 01</span>
+            </div>
+
+            <div class="sm-cover-title">
+              <small>CONTENT STRATEGY</small>
+              <h3>7-Day Instagram<br><span>Content Calendar</span></h3>
+            </div>
+          </div>
+
+          <div class="sm-card-body">
+            <div class="sm-category">Planning & Strategy</div>
             <h3>7-Day Instagram Content Calendar</h3>
             <p>
-              A sample weekly content plan with content themes, a publishing
-              schedule, caption planning and a performance-tracking concept.
+              A structured weekly content plan with content themes,
+              publishing ideas, caption direction and a practical workflow.
             </p>
-            <a class="button" href="social-media-project-01.html">
-              View Project →
-            </a>
+
+            <div class="sm-card-bottom">
+              <span class="sm-status">Portfolio Concept</span>
+              <span class="sm-open">View Project <span>→</span></span>
+            </div>
           </div>
-        </article>
+        </a>
 
         <!-- PROJECT 02 -->
-        <article class="project">
-          <a href="social-media-project-02.html"
-             aria-label="View Project 02: Volt Athletics Instagram Feed">
+        <a class="sm-card" href="social-media-project-02.html"
+           aria-label="Open Project 02: 9-Post Instagram Feed Design">
+          <div class="sm-cover sm-cover-no-image">
+            <div class="sm-abstract"></div>
+
+            <div class="sm-cover-top">
+              <span class="sm-brand">VOLT ATHLETICS</span>
+              <span class="sm-number">PROJECT 02</span>
+            </div>
+
+            <div class="sm-cover-title">
+              <small>INSTAGRAM FEED DESIGN</small>
+              <h3>Build a stronger<br><span>visual identity.</span></h3>
+            </div>
+          </div>
+
+          <div class="sm-card-body">
+            <div class="sm-category">Feed Design</div>
+            <h3>9-Post Instagram Feed Design</h3>
+            <p>
+              A coordinated Instagram grid concept designed to create a
+              consistent visual identity across nine individual posts.
+            </p>
+
+            <div class="sm-card-bottom">
+              <span class="sm-status">Portfolio Concept</span>
+              <span class="sm-open">View Project <span>→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 03 -->
+        <a class="sm-card" href="social-media-project-03.html"
+           aria-label="Open Project 03: Instagram Content Strategy">
+          <div class="sm-cover">
             <img
-              class="cover"
-              src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_01.png"
-              alt="Volt Athletics Instagram feed design cover"
+              src="assets/project-03-instagram-stories/03_Volt_Strategy_Slide_01.png"
+              alt="VOLT Athletics social media strategy project cover"
               loading="lazy"
               onerror="this.style.display='none'">
-          </a>
-          <div class="project-body">
-            <span class="tag">Project 02 · Instagram Design</span>
-            <h3>VOLT ATHLETICS — 9-Post Feed Concept</h3>
-            <p>
-              A nine-post fitness content concept combining workout education,
-              motivation, healthy habits, community engagement and brand promotion.
-            </p>
-            <a class="button" href="social-media-project-02.html">
-              View All 9 Designs →
-            </a>
-          </div>
-        </article>
 
-        <!-- FUTURE PROJECT SLOT -->
-        <article class="project">
-          <div class="project-body">
-            <span class="tag">Upcoming Project</span>
-            <h3>Instagram Stories Campaign</h3>
-            <p>
-              An upcoming concept focused on story sequences, engagement
-              prompts and brand interaction.
-            </p>
-            <span class="coming">Coming Soon</span>
-          </div>
-        </article>
+            <div class="sm-cover-top">
+              <span class="sm-brand">VOLT ATHLETICS</span>
+              <span class="sm-number">PROJECT 03</span>
+            </div>
 
-        <!-- FUTURE PROJECT SLOT -->
-        <article class="project">
-          <div class="project-body">
-            <span class="tag">Upcoming Project</span>
-            <h3>Monthly Social Media Strategy</h3>
-            <p>
-              An upcoming sample covering monthly content pillars, scheduling
-              and reporting structure.
-            </p>
-            <span class="coming">Coming Soon</span>
+            <div class="sm-cover-title">
+              <small>CONTENT STRATEGY</small>
+              <h3>Plan with purpose.<br><span>Post with intent.</span></h3>
+            </div>
           </div>
-        </article>
+
+          <div class="sm-card-body">
+            <div class="sm-category">Strategy & Planning</div>
+            <h3>Instagram Content Strategy</h3>
+            <p>
+              A strategy concept showing how content themes, audience
+              engagement and a consistent publishing approach can work together.
+            </p>
+
+            <div class="sm-card-bottom">
+              <span class="sm-status">Portfolio Concept</span>
+              <span class="sm-open">View Project <span>→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 04 -->
+        <a class="sm-card" href="social-media-project-04.html"
+           aria-label="Open Project 04: Instagram Stories Campaign">
+          <div class="sm-cover">
+            <img
+              src="assets/project-04/04_Volt_Story_01.png"
+              alt="VOLT Athletics Instagram Stories campaign cover"
+              loading="lazy"
+              onerror="this.style.display='none'">
+
+            <div class="sm-cover-top">
+              <span class="sm-brand">VOLT ATHLETICS</span>
+              <span class="sm-number">PROJECT 04</span>
+            </div>
+
+            <div class="sm-cover-title">
+              <small>INSTAGRAM STORIES</small>
+              <h3>Start a conversation.<br><span>Build engagement.</span></h3>
+            </div>
+          </div>
+
+          <div class="sm-card-body">
+            <div class="sm-category">Stories Campaign</div>
+            <h3>6-Story Instagram Engagement Campaign</h3>
+            <p>
+              A six-story campaign concept using audience polls, questions,
+              useful fitness content and calls to action.
+            </p>
+
+            <div class="sm-card-bottom">
+              <span class="sm-status">Portfolio Concept</span>
+              <span class="sm-open">View Project <span>→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 05 -->
+        <a class="sm-card" href="social-media-project-05.html"
+           aria-label="Open Project 05: Social Media Performance Report">
+          <div class="sm-cover">
+            <img
+              src="assets/project-05/05_Volt_Report_Slide_01.png"
+              alt="VOLT Athletics monthly Instagram performance report cover"
+              loading="lazy"
+              onerror="this.style.display='none'">
+
+            <div class="sm-cover-top">
+              <span class="sm-brand">VOLT ATHLETICS</span>
+              <span class="sm-number">PROJECT 05</span>
+            </div>
+
+            <div class="sm-cover-title">
+              <small>ANALYTICS & REPORTING</small>
+              <h3>Measure. Learn.<br><span>Improve.</span></h3>
+            </div>
+          </div>
+
+          <div class="sm-card-body">
+            <div class="sm-category">Reporting & Analytics</div>
+            <h3>Monthly Social Media Performance Report</h3>
+            <p>
+              An eight-slide reporting template for reviewing reach,
+              engagement, content performance, enquiries and next actions.
+            </p>
+
+            <div class="sm-card-bottom">
+              <span class="sm-status">Portfolio Concept</span>
+              <span class="sm-open">View Project <span>→</span></span>
+            </div>
+          </div>
+        </a>
 
       </div>
+
+      <div class="sm-note">
+        <strong>Portfolio disclosure:</strong>
+        These are fictional portfolio concepts prepared by Suresh Yadav.
+        VOLT ATHLETICS and NORTHFRAME STUDIO are concept brands.
+        No real client relationship or campaign performance is claimed.
+      </div>
+    </main>
+
+    <!-- CONTACT CTA -->
+    <section class="sm-container sm-cta">
+      <div>
+        <h2>Need help with your social media?</h2>
+        <p>
+          Get in touch to discuss content planning, Instagram creatives
+          or social media management.
+        </p>
+      </div>
+
+      <a href="contact.html">Contact Me →</a>
     </section>
 
-    <aside class="notice">
-      <strong>Portfolio note:</strong> These are portfolio concepts created
-      for a fictional brand, VOLT ATHLETICS. They are not presented as paid
-      client work, and no real campaign performance results are claimed.
-    </aside>
-  </main>
+    <!-- FOOTER -->
+    <footer class="sm-footer">
+      <div class="sm-container sm-footer-inner">
+        <span>© Suresh Yadav · Social Media Management Portfolio</span>
+        <span>Strategy · Content · Design · Reporting</span>
+      </div>
+    </footer>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <span>© <span id="year"></span> Suresh Yadav</span>
-      <span>Social Media Management Portfolio</span>
-    </div>
-  </footer>
+  </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/config.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
