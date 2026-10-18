@@ -4,165 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f1e8">
-<meta name="description" content="Explore graphic design concepts, social media creatives, posters and promotional designs by Suresh Yadav.">
+<meta name="description" content="Explore Suresh Yadav's graphic design portfolio, featuring fitness campaigns, food advertising, skincare concepts, brand promotions and digital product visuals.">
 <title>Graphic Design Portfolio | Suresh Yadav</title>
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-/* GRAPHIC DESIGN PORTFOLIO */
-.portfolio-intro {
-  max-width: 760px;
-  margin-bottom: 36px;
-}
-
-.portfolio-intro p {
-  max-width: 650px;
-  line-height: 1.8;
-}
-
-.portfolio-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 26px 0 22px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(20,36,59,.18);
-}
-
-.portfolio-count {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.portfolio-note {
-  font-size: 13px;
-  opacity: .72;
-}
-
-.design-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.design-card {
-  min-width: 0;
-  overflow: hidden;
-  background: #fffdf8;
-  border: 1px solid rgba(20,36,59,.10);
-  border-radius: 5px;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.design-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(20,36,59,.10);
-}
-
-.design-image {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  background: #e9e1d5;
-}
-
-.design-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform .35s ease;
-}
-
-.design-card:hover .design-image img {
-  transform: scale(1.025);
-}
-
-.design-number {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 1;
-  padding: 7px 10px;
-  background: rgba(245,241,232,.94);
-  color: #14243b;
-  font-size: 10px;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.design-info {
-  padding: 17px 17px 19px;
-}
-
-.design-info h3 {
-  margin: 0 0 7px;
-  font-size: 17px;
-  line-height: 1.4;
-}
-
-.design-info p {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-  opacity: .72;
-}
-
-.concept-label {
-  display: inline-block;
-  margin-top: 12px;
-  color: #a34b2d;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-.gallery-bottom {
-  margin-top: 30px;
-  padding: 18px 20px;
-  border-left: 3px solid var(--orange);
-  background: rgba(20,36,59,.045);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-@media (max-width: 850px) {
-  .design-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .design-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .design-info {
-    padding: 12px;
-  }
-
-  .design-info h3 {
-    font-size: 14px;
-  }
-
-  .design-info p {
-    font-size: 11px;
-  }
-
-  .design-number {
-    top: 7px;
-    left: 7px;
-    padding: 5px 7px;
-    font-size: 9px;
-  }
-}
+.portfolio-intro{max-width:760px;margin-bottom:30px}
+.portfolio-intro p{max-width:650px;line-height:1.85}
+.gallery-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:28px 0 22px;padding-bottom:16px;border-bottom:1px solid #d8d0c4}
+.gallery-heading strong{font-size:11px;letter-spacing:1.8px;text-transform:uppercase}
+.gallery-heading span{font-size:12px;opacity:.7}
+.design-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.design-card{min-width:0;overflow:hidden;background:#fffdf8;border:1px solid rgba(20,36,59,.11);border-radius:5px;box-shadow:0 5px 20px rgba(20,36,59,.04);transition:transform .25s ease,box-shadow .25s ease}
+.design-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,36,59,.1)}
+.design-image{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:#eae3d8;overflow:hidden}
+.design-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.project-number{position:absolute;top:11px;left:11px;z-index:2;background:rgba(255,253,248,.95);color:#14243b;padding:7px 9px;font-size:10px;letter-spacing:1px;font-weight:700}
+.image-fallback{display:none;box-sizing:border-box;width:100%;height:100%;padding:20px;align-items:center;justify-content:center;text-align:center;color:#14243b;overflow-wrap:anywhere}
+.image-fallback strong{font-size:16px}
+.image-fallback p{font-size:12px;line-height:1.7}
+.design-info{padding:18px 17px 20px}
+.design-category{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#a34b2d;margin-bottom:9px}
+.design-info h3{font-size:18px;line-height:1.4;margin:0 0 9px}
+.design-info p{font-size:12px;line-height:1.8;margin:0;opacity:.78}
+.design-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
+.design-tags span{font-size:10px;padding:5px 8px;background:#f1ece3;border-radius:2px;color:#39465a}
+.concept-label{display:block;margin-top:14px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a34b2d}
+.portfolio-note{margin-top:28px;padding:18px 20px;border-left:3px solid var(--orange);background:rgba(20,36,59,.045);font-size:13px;line-height:1.8}
+@media(max-width:850px){.design-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:480px){.design-gallery{gap:10px}.design-info{padding:12px}.design-info h3{font-size:15px}.design-info p{font-size:11px}.project-number{top:7px;left:7px;padding:5px 7px;font-size:9px}.design-tags{gap:4px}.design-tags span{font-size:9px;padding:4px 6px}}
 </style>
 </head>
 
@@ -173,10 +43,7 @@
       <span class="brand-mark">S</span>
       <span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span>
     </a>
-
-    <button class="menu-toggle" aria-label="Open navigation menu"
-      aria-expanded="false" type="button">☰</button>
-
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="graphic-design.html" class="active">Graphic Design</a>
@@ -187,7 +54,6 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-
     <a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
   </div>
 </header>
@@ -195,12 +61,10 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html">Home</a> / Graphic Design
-      </div>
-      <div class="eyebrow">Service / Graphic Design</div>
-      <h1>Graphic Design<br><span style="color:var(--orange)">with purpose.</span></h1>
-      <p>Thoughtful visuals, clear communication and consistent design for brands that want to stand out.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Graphic Design</div>
+      <div class="eyebrow">Creative Services / Graphic Design</div>
+      <h1>Design that<br><span style="color:var(--orange)">makes an impact.</span></h1>
+      <p>Purposeful visual communication through strong typography, considered layouts, colour and brand-focused creative design.</p>
       <a class="button" href="contact.html">Discuss a Project ↗</a>
     </div>
   </section>
@@ -208,208 +72,28 @@
   <section class="section">
     <div class="container">
       <div class="portfolio-intro">
-        <div class="eyebrow">Selected work / 01—15</div>
-        <h2>Designs made to<br>make an impression.</h2>
+        <div class="eyebrow">Selected portfolio / 13 projects</div>
+        <h2>Ideas, shaped into<br>visual experiences.</h2>
         <p>
-          A collection of graphic design explorations, promotional creatives
-          and visual concepts. Each project demonstrates a different approach
-          to layout, typography, colour and visual communication.
+          Explore a selection of design concepts across fitness, food and beverage,
+          skincare, fragrance, real estate, digital products and event promotion.
+          Each project explores a distinct visual direction and demonstrates how
+          design can communicate a message, establish a mood and present an idea clearly.
         </p>
       </div>
 
-      <div class="portfolio-meta">
-        <span class="portfolio-count">Graphic Design Gallery</span>
-        <span class="portfolio-note">15 selected visuals · Concept portfolio</span>
+      <div class="gallery-heading">
+        <strong>Graphic Design / Selected Work</strong>
+        <span>13 visual concepts</span>
       </div>
 
-      <div class="design-gallery">
+      <div class="design-gallery" id="designGallery"></div>
 
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 01</span>
-            <img src="assets/graphic-design/graphic-design-01.png" alt="Graphic design concept 01" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 01</h3>
-            <p>Graphic design exploration</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 02</span>
-            <img src="assets/graphic-design/graphic-design-02.png" alt="Graphic design concept 02" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 02</h3>
-            <p>Composition and typography</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 03</span>
-            <img src="assets/graphic-design/graphic-design-03.png" alt="Graphic design concept 03" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 03</h3>
-            <p>Creative visual communication</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 04</span>
-            <img src="assets/graphic-design/graphic-design-04.png" alt="Graphic design concept 04" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 04</h3>
-            <p>Layout and colour study</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 05</span>
-            <img src="assets/graphic-design/graphic-design-05.png" alt="Graphic design concept 05" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 05</h3>
-            <p>Promotional design exploration</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 06</span>
-            <img src="assets/graphic-design/graphic-design-06.png" alt="Graphic design concept 06" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 06</h3>
-            <p>Visual identity exploration</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 07</span>
-            <img src="assets/graphic-design/graphic-design-07.png" alt="Graphic design concept 07" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 07</h3>
-            <p>Digital creative design</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 08</span>
-            <img src="assets/graphic-design/graphic-design-08.png" alt="Graphic design concept 08" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 08</h3>
-            <p>Typography-led composition</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 09</span>
-            <img src="assets/graphic-design/graphic-design-09.png" alt="Graphic design concept 09" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 09</h3>
-            <p>Promotional visual study</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 10</span>
-            <img src="assets/graphic-design/graphic-design-10.png" alt="Graphic design concept 10" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 10</h3>
-            <p>Brand communication design</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 11</span>
-            <img src="assets/graphic-design/graphic-design-11.png" alt="Graphic design concept 11" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 11</h3>
-            <p>Social media creative study</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 12</span>
-            <img src="assets/graphic-design/graphic-design-12.png" alt="Graphic design concept 12" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 12</h3>
-            <p>Layout and visual hierarchy</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 13</span>
-            <img src="assets/graphic-design/graphic-design-13.png" alt="Roast Theory fictional coffee brand design concept" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Roast Theory</h3>
-            <p>Fictional specialty coffee brand concept</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 14</span>
-            <img src="assets/graphic-design/graphic-design-14.png" alt="Graphic design concept 14" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 14</h3>
-            <p>Creative direction exploration</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-image">
-            <span class="design-number">PROJECT 15</span>
-            <img src="assets/graphic-design/graphic-design-15.png" alt="Graphic design concept 15" loading="lazy">
-          </div>
-          <div class="design-info">
-            <h3>Visual Concept 15</h3>
-            <p>Graphic design exploration</p>
-            <span class="concept-label">Concept Project</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="gallery-bottom">
-        <strong>About these projects:</strong>
-        This gallery presents design concepts for portfolio demonstration.
-        Fictional brand concepts are not client commissions.
+      <div class="portfolio-note">
+        <strong>Project transparency:</strong>
+        These works are presented as portfolio concepts. Fictional brand designs
+        are demonstrations of creative direction and are not represented as
+        commissioned client projects.
       </div>
     </div>
   </section>
@@ -417,29 +101,28 @@
   <section class="section">
     <div class="container detail-layout">
       <article class="detail-panel">
-        <div class="eyebrow">What I can help with</div>
-        <h2>Clear work. Thoughtful execution.</h2>
+        <div class="eyebrow">Design services</div>
+        <h2>Visuals with a clear purpose.</h2>
         <p>
-          Every project starts with understanding the goal, audience and message.
-          The design is planned to be useful, easy to understand and consistent
-          with the brand.
+          I create practical, brand-conscious visuals that help businesses
+          present their products, services and ideas professionally.
         </p>
         <ul>
-          <li>Posters and advertisements</li>
-          <li>Social media creatives</li>
-          <li>Thumbnails and promotional graphics</li>
-          <li>Brand collateral</li>
+          <li>Social media posts and carousel graphics</li>
+          <li>Promotional posters and advertisements</li>
+          <li>Product and campaign creatives</li>
+          <li>Brand collateral and marketing materials</li>
         </ul>
       </article>
 
       <article class="detail-panel">
-        <div class="eyebrow">Project enquiries</div>
-        <h2>Need a design for your brand?</h2>
+        <div class="eyebrow">Work together</div>
+        <h2>Have a creative brief?</h2>
         <p>
-          Tell me about your business, audience and the design you need.
-          I can discuss the project scope, deliverables and pricing with you.
+          Share your business, target audience and design requirements.
+          We can discuss the deliverables, timeline and project pricing before work begins.
         </p>
-        <a class="button" href="contact.html">Discuss Your Project ↗</a>
+        <a class="button" href="contact.html">Start a Conversation ↗</a>
       </article>
     </div>
   </section>
@@ -448,8 +131,8 @@
     <div class="container contact-panel">
       <div>
         <div class="eyebrow">Have a project in mind?</div>
-        <h2>Let's talk about it.</h2>
-        <p>Share your goal and what you need help with. I’ll respond by message or email.</p>
+        <h2>Let's make it clear.</h2>
+        <p>Tell me what you need designed. I’ll respond by message or email.</p>
       </div>
       <a class="button" href="contact.html">Contact Me ↗</a>
     </div>
@@ -466,6 +149,158 @@
     </div>
   </div>
 </footer>
+
+<script>
+const projects = [
+  {
+    title:"Volt Athletics",
+    category:"Fitness & Advertising",
+    description:"A high-contrast gym campaign built around bold typography, energetic colours and a clear membership offer. Designed to communicate strength, motivation and promotional value.",
+    tags:["Fitness","Promotion","Typography"]
+  },
+  {
+    title:"Brand Editorial Study",
+    category:"Graphic Design",
+    description:"A visual composition study focused on layout, spacing and type hierarchy. The concept explores how a restrained design system can create a clean, organised presentation.",
+    tags:["Layout","Typography","Composition"]
+  },
+  {
+    title:"Flowpay",
+    category:"Digital Product Concept",
+    description:"A fictional personal finance app promotion that presents budgeting features through a modern interface, a strong blue palette and a clear product message.",
+    tags:["Fintech","App Promotion","Digital"]
+  },
+  {
+    title:"Dewform",
+    category:"Skincare & Beauty",
+    description:"A skincare campaign concept using soft neutral tones, refined typography and a minimal product presentation to communicate simplicity and everyday care.",
+    tags:["Skincare","Product Design","Minimal"]
+  },
+  {
+    title:"Nocturne 08",
+    category:"Luxury Fragrance",
+    description:"A sophisticated perfume promotion built around dark tones, restrained gold details and editorial typography to create a premium evening fragrance mood.",
+    tags:["Fragrance","Luxury","Editorial"]
+  },
+  {
+    title:"Property Collection",
+    category:"Real Estate Marketing",
+    description:"A property showcase concept that combines interior photography, property highlights and a viewing call to action in a structured marketing layout.",
+    tags:["Real Estate","Property","Advertising"]
+  },
+  {
+    title:"Fresh Bowl",
+    category:"Food & Beverage",
+    description:"A fresh-food promotional concept using appetising imagery, natural colours and a prominent offer to communicate flavour, convenience and value.",
+    tags:["Restaurant","Food","Promotion"]
+  },
+  {
+    title:"Framecut",
+    category:"Creative Services",
+    description:"A visual identity and service-promotion concept for a short-form video editing brand, featuring a dark interface-inspired layout and bold editorial typography.",
+    tags:["Creative Studio","Services","Digital"]
+  },
+  {
+    title:"Maison Fable",
+    category:"Retail & Festive Campaign",
+    description:"A premium retail promotion concept using dark backgrounds, elegant typography and gold accents to create a refined seasonal sale announcement.",
+    tags:["Retail","Campaign","Luxury"]
+  },
+  {
+    title:"Northframe Studio",
+    category:"Creative Brand Presentation",
+    description:"A studio introduction concept presenting creative services, brand positioning and contact information in a clear, professional layout.",
+    tags:["Branding","Studio","Services"]
+  },
+  {
+    title:"Ember & Bun",
+    category:"Restaurant Advertising",
+    description:"A bold burger campaign combining appetising food visuals, a high-visibility price offer and strong promotional hierarchy for a fictional restaurant brand.",
+    tags:["Food","Restaurant","Advertising"]
+  },
+  {
+    title:"Afterglow",
+    category:"Event & Entertainment",
+    description:"An electronic music event concept using neon accents, atmospheric dark tones and layered graphic elements to communicate a distinctive nightlife identity.",
+    tags:["Event","Music","Poster"]
+  },
+  {
+    title:"Roast Theory",
+    category:"Coffee & Packaging Concept",
+    description:"A specialty coffee concept built around warm cream and espresso tones, refined typography and a prominent coffee-pack presentation to establish a considered café identity.",
+    tags:["Coffee","Packaging","Brand Concept"]
+  }
+];
+
+const gallery = document.getElementById("designGallery");
+
+projects.forEach((project, index) => {
+  const number = String(index + 1).padStart(2, "0");
+  const filename = `assets/graphic-design/graphic-design-${number}.png`;
+
+  const card = document.createElement("article");
+  card.className = "design-card";
+
+  const imageArea = document.createElement("div");
+  imageArea.className = "design-image";
+
+  const badge = document.createElement("span");
+  badge.className = "project-number";
+  badge.textContent = `PROJECT ${number}`;
+
+  const img = document.createElement("img");
+  img.src = filename;
+  img.alt = `${project.title} — ${project.category} graphic design concept`;
+  img.loading = index < 3 ? "eager" : "lazy";
+
+  const fallback = document.createElement("div");
+  fallback.className = "image-fallback";
+  fallback.innerHTML =
+    `<div><strong>Image not found</strong><p>${filename}</p><p>Check this exact filename and extension in GitHub.</p></div>`;
+
+  img.addEventListener("error", () => {
+    img.style.display = "none";
+    fallback.style.display = "flex";
+  });
+
+  img.addEventListener("load", () => {
+    img.style.display = "block";
+    fallback.style.display = "none";
+  });
+
+  imageArea.append(badge, img, fallback);
+
+  const info = document.createElement("div");
+  info.className = "design-info";
+
+  const category = document.createElement("div");
+  category.className = "design-category";
+  category.textContent = project.category;
+
+  const title = document.createElement("h3");
+  title.textContent = project.title;
+
+  const description = document.createElement("p");
+  description.textContent = project.description;
+
+  const tags = document.createElement("div");
+  tags.className = "design-tags";
+
+  project.tags.forEach(tagText => {
+    const tag = document.createElement("span");
+    tag.textContent = tagText;
+    tags.appendChild(tag);
+  });
+
+  const label = document.createElement("span");
+  label.className = "concept-label";
+  label.textContent = "Portfolio Concept";
+
+  info.append(category, title, description, tags, label);
+  card.append(imageArea, info);
+  gallery.appendChild(card);
+});
+</script>
 
 <script src="assets/config.js"></script>
 <script src="assets/main.js"></script>
