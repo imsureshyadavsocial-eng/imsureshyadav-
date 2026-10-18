@@ -1,1 +1,484 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14243b">
+  <title>VOLT ATHLETICS — Instagram Feed Concept | Suresh Yadav</title>
+  <meta name="description" content="A nine-post Instagram feed design concept for fictional fitness brand Volt Athletics.">
+
+  <style>
+    :root {
+      --navy: #14243b;
+      --orange: #e65c32;
+      --cream: #f5f1e8;
+      --white: #ffffff;
+      --muted: #687080;
+      --line: #ded9ce;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header { border-bottom: 1px solid var(--line); }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--orange); }
+
+    .navlinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .navlinks a {
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .navlinks a:hover { color: var(--orange); }
+
+    .hero { padding: 64px 0 36px; }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 14px 0;
+      font-size: clamp(36px, 7vw, 70px);
+      line-height: 1.04;
+      letter-spacing: -2.5px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .meta span {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #ffffff90;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button:hover { background: var(--orange); }
+
+    .section-head { margin: 32px 0 24px; }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.2;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      padding-bottom: 65px;
+    }
+
+    .slide {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: #eeece6;
+    }
+
+    .slide-info { padding: 15px; }
+
+    .number {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      margin: 5px 0;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .slide-info p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .info-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #ffffffa6;
+    }
+
+    .info-card h3 { font-size: 19px; }
+
+    .info-card p,
+    .info-card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .info-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .disclaimer {
+      margin: 30px 0 65px;
+      padding: 22px;
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      background: #ffffffa6;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bottom-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 65px;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks { gap: 12px; }
+
+      .hero { padding-top: 42px; }
+
+      h1 { letter-spacing: -1.2px; }
+
+      .gallery { grid-template-columns: 1fr; }
+
+      .info-grid { grid-template-columns: 1fr; }
+
+      .slide img { aspect-ratio: 4 / 3; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">SURESH <span>YADAV.</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="graphic-design.html">Graphic Design</a>
+        <a href="social-media.html">Social Media</a>
+        <a href="content-writing.html">Content Writing</a>
+        <a href="b2b-lead-generation.html">B2B Leads</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Social Media Management / Project 02</div>
+      <h1>VOLT ATHLETICS<br>Instagram Feed Concept</h1>
+
+      <p>
+        A coordinated nine-post Instagram content concept for a fictional
+        fitness brand. The feed combines brand introduction, workout education,
+        motivation, healthy habits, community prompts and gym promotion.
+      </p>
+
+      <div class="meta">
+        <span>9 Instagram Posts</span>
+        <span>Fitness & Wellness</span>
+        <span>Concept Project</span>
+      </div>
+
+      <a class="button" href="social-media.html">← Back to Social Media Portfolio</a>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>The 9-Post Feed</h2>
+        <p>Each design is shown below using its original uploaded filename.</p>
+      </div>
+
+      <div class="gallery">
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_01.png"
+            alt="VOLT ATHLETICS post 1: brand introduction"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 01</span>
+            <h3>Brand Introduction</h3>
+            <p>Introduce the brand identity and fitness mindset.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_02.png"
+            alt="VOLT ATHLETICS post 2: three gym mistakes to avoid"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 02</span>
+            <h3>3 Gym Mistakes to Avoid</h3>
+            <p>Educational content designed to encourage saves.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_03.png"
+            alt="VOLT ATHLETICS post 3: consistency beats perfection"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 03</span>
+            <h3>Consistency Beats Perfection</h3>
+            <p>Motivational messaging around steady progress.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_04.png"
+            alt="VOLT ATHLETICS post 4: full-body starter workout tips"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 04</span>
+            <h3>Full-Body Starter</h3>
+            <p>Beginner-friendly exercise variations and form reminders.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_05.png"
+            alt="VOLT ATHLETICS post 5: fitness community goals"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 05</span>
+            <h3>Community & Fitness Goals</h3>
+            <p>A prompt inviting the audience to share their goals.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_06.png"
+            alt="VOLT ATHLETICS post 6: four healthy training habits"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 06</span>
+            <h3>4 Healthy Training Habits</h3>
+            <p>Simple reminders about sleep, hydration, meals and routine.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_07.png"
+            alt="VOLT ATHLETICS post 7: gym promotion"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 07</span>
+            <h3>Gym Promotion</h3>
+            <p>A training enquiry concept with a direct call to action.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_08.png"
+            alt="VOLT ATHLETICS post 8: fitness myth versus fact"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 08</span>
+            <h3>Fitness Myth vs Fact</h3>
+            <p>Educational comparison presented in a shareable format.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img
+            src="assets/social-media/project-02-instagram-feed/02_Volt_Feed_Post_09.png"
+            alt="VOLT ATHLETICS post 9: brand closing"
+            loading="lazy">
+          <div class="slide-info">
+            <span class="number">POST 09</span>
+            <h3>Brand Closing</h3>
+            <p>Close the sequence with a consistent brand message.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Project Overview</h2>
+        <p>Purpose, content structure and design direction.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Objective</h3>
+          <p>
+            Demonstrate how a fitness brand can combine educational,
+            motivational, community-focused and promotional content in
+            a visually coordinated Instagram feed.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Visual Direction</h3>
+          <p>
+            A bold fitness aesthetic using dark backgrounds, bright lime
+            accents, strong typography and a consistent visual system.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Content Mix</h3>
+          <ul>
+            <li>Brand awareness</li>
+            <li>Workout education</li>
+            <li>Motivational content</li>
+            <li>Community engagement</li>
+            <li>Promotional messaging</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h3>Intended Audience</h3>
+          <p>
+            Fitness beginners and gym-goers looking for workout guidance,
+            training motivation and a fitness community.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="disclaimer">
+      <strong>Concept project disclosure:</strong> VOLT ATHLETICS is a
+      fictional brand created for portfolio demonstration. This project
+      showcases design and content-planning skills; it does not represent
+      verified client work or claim actual engagement, reach or sales results.
+    </aside>
+
+    <div class="bottom-links">
+      <a class="button" href="social-media.html">← All Social Media Projects</a>
+      <a class="button" href="contact.html">Contact for Work →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Suresh Yadav · Social Media Management Portfolio
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
