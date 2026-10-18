@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f1e8">
-<meta name="description" content="Explore graphic design concepts by Suresh Yadav, including business advisory, fitness, food, skincare, real estate and digital campaigns.">
+<meta name="description" content="Graphic design portfolio by Suresh Yadav, featuring fitness campaigns, product promotions, food advertising and brand concepts.">
 <title>Graphic Design Portfolio | Suresh Yadav</title>
 <link rel="stylesheet" href="assets/style.css">
 
@@ -72,19 +72,19 @@
   <section class="section">
     <div class="container">
       <div class="portfolio-intro">
-        <div class="eyebrow">Selected portfolio / 13 projects</div>
+        <div class="eyebrow">Selected Portfolio / 12 Projects</div>
         <h2>Ideas, shaped into<br>visual experiences.</h2>
         <p>
-          Explore design concepts across business consulting, fitness, food and
-          beverage, skincare, fragrance, real estate, digital products and events.
-          Each visual explores a distinct creative direction and demonstrates
-          how design can communicate an idea clearly and professionally.
+          Explore twelve design concepts spanning fitness, digital products,
+          skincare, fragrance, real estate, food, creative services, retail,
+          events and specialty coffee. Each project explores a distinct visual
+          direction through typography, colour, composition and messaging.
         </p>
       </div>
 
       <div class="gallery-heading">
         <strong>Graphic Design / Selected Work</strong>
-        <span>13 visual concepts</span>
+        <span>12 visual concepts</span>
       </div>
 
       <div class="design-gallery" id="designGallery"></div>
@@ -100,7 +100,7 @@
   <section class="section">
     <div class="container detail-layout">
       <article class="detail-panel">
-        <div class="eyebrow">Design services</div>
+        <div class="eyebrow">Design Services</div>
         <h2>Visuals with a clear purpose.</h2>
         <p>I create practical, brand-conscious visuals that help businesses present their products, services and ideas professionally.</p>
         <ul>
@@ -111,7 +111,7 @@
         </ul>
       </article>
       <article class="detail-panel">
-        <div class="eyebrow">Work together</div>
+        <div class="eyebrow">Work Together</div>
         <h2>Have a creative brief?</h2>
         <p>Share your business, target audience and design requirements. We can discuss deliverables, timeline and pricing before work begins.</p>
         <a class="button" href="contact.html">Start a Conversation ↗</a>
@@ -147,16 +147,9 @@ const projects = [
   {
     title:"Volt Athletics",
     category:"Fitness & Advertising",
-    description:"A bold gym membership campaign combining high-contrast typography, energetic lime accents and a prominent promotional offer. Designed to communicate training, discipline and membership value.",
+    description:"A bold gym membership campaign combining high-contrast typography, energetic lime accents and a prominent promotional offer. The layout communicates strength, discipline and membership value.",
     tags:["Fitness","Promotion","Typography"],
     path:"assets/graphic-design/graphic-design-01.png"
-  },
-  {
-    title:"Northstar Business Group",
-    category:"Business Advisory & Strategy",
-    description:"A corporate advisory concept using a deep navy palette, restrained gold details and a strong editorial layout. The design presents strategy, digital solutions and growth advisory as a clear, premium business offering.",
-    tags:["Consulting","Corporate","Brand Communication"],
-    path:"assets/graphic-design-02.png"
   },
   {
     title:"Flowpay",
@@ -182,7 +175,7 @@ const projects = [
   {
     title:"Property Collection",
     category:"Real Estate Marketing",
-    description:"A real estate showcase concept combining interior photography, property highlights and a viewing call to action in a structured layout for modern residential marketing.",
+    description:"A real estate showcase concept combining interior photography, property highlights and a viewing call to action in a structured layout for residential marketing.",
     tags:["Real Estate","Property","Advertising"],
     path:"assets/graphic-design/graphic-design-06.png"
   },
@@ -196,7 +189,7 @@ const projects = [
   {
     title:"Framecut",
     category:"Creative Services",
-    description:"A promotional design concept for a short-form video editing studio, using a dark interface-inspired composition, bold type and a direct presentation of creative services.",
+    description:"A promotional design concept for a short-form video editing studio, using a dark interface-inspired composition, bold typography and a direct presentation of creative services.",
     tags:["Creative Studio","Services","Digital"],
     path:"assets/graphic-design/graphic-design-08.png"
   },
@@ -290,9 +283,9 @@ projects.forEach((project, index) => {
   const tags = document.createElement("div");
   tags.className = "design-tags";
 
-  project.tags.forEach(text => {
+  project.tags.forEach(tagText => {
     const tag = document.createElement("span");
-    tag.textContent = text;
+    tag.textContent = tagText;
     tags.appendChild(tag);
   });
 
