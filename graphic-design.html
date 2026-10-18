@@ -1,10 +1,473 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f1e8"><meta name="description" content="Visual design that gives brands a clear, consistent and memorable presence."><title>Graphic Design | Suresh Yadav</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="container nav">
-<a class="brand" href="index.html" aria-label="Suresh Yadav home"><span class="brand-mark">S</span><span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-<nav class="nav-links" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="graphic-design.html" class="active">Graphic Design</a><a href="social-media.html" class="">Social Media</a><a href="content-writing.html" class="">Content Writing</a><a href="b2b-lead-generation.html" class="">B2B Leads</a><a href="digital-marketing-branding.html" class="">Branding</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
-<a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
-</div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Graphic Design</div><div class="eyebrow">Service  /  Graphic Design</div><h1>Graphic Design<br><span style="color:var(--orange)">with purpose.</span></h1><p>Visual design that gives brands a clear, consistent and memorable presence.</p><a class="button" href="contact.html">Discuss a Project ↗</a></div></section>
-<section class="section"><div class="container detail-layout"><article class="detail-panel"><div class="eyebrow">What I can help with</div><h2>Clear work. Thoughtful execution.</h2><p>Every project starts with understanding the goal, audience and message. The deliverable is planned to be useful, easy to understand and consistent with the brand.</p><ul><li>Posters & advertisements</li><li>Social media creatives</li><li>Thumbnails & promotional graphics</li><li>Brand collateral</li></ul></article><article class="detail-panel"><div class="eyebrow">Selected work</div><h2>Portfolio gallery</h2><p>Project samples will be added here as they are ready. No sample projects are published in this starter version.</p><div class="gallery-empty"><div class="gallery-slot"><div><span>＋</span>Project image slot 01</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 02</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 03</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 04</div></div></div></article></div></section>
-<section class="section"><div class="container contact-panel"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's talk about it.</h2><p>Share your goal and what you need help with. I’ll respond by message or email.</p></div><a class="button" href="contact.html">Contact Me ↗</a></div></section></main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/main.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f1e8">
+<meta name="description" content="Explore graphic design concepts, social media creatives, posters and promotional designs by Suresh Yadav.">
+<title>Graphic Design Portfolio | Suresh Yadav</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* GRAPHIC DESIGN PORTFOLIO */
+.portfolio-intro {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.portfolio-intro p {
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+.portfolio-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(20,36,59,.18);
+}
+
+.portfolio-count {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.portfolio-note {
+  font-size: 13px;
+  opacity: .72;
+}
+
+.design-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.design-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fffdf8;
+  border: 1px solid rgba(20,36,59,.10);
+  border-radius: 5px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(20,36,59,.10);
+}
+
+.design-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: #e9e1d5;
+}
+
+.design-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.design-card:hover .design-image img {
+  transform: scale(1.025);
+}
+
+.design-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 7px 10px;
+  background: rgba(245,241,232,.94);
+  color: #14243b;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.design-info {
+  padding: 17px 17px 19px;
+}
+
+.design-info h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.design-info p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: .72;
+}
+
+.concept-label {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a34b2d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.gallery-bottom {
+  margin-top: 30px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--orange);
+  background: rgba(20,36,59,.045);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+  .design-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .design-info {
+    padding: 12px;
+  }
+
+  .design-info h3 {
+    font-size: 14px;
+  }
+
+  .design-info p {
+    font-size: 11px;
+  }
+
+  .design-number {
+    top: 7px;
+    left: 7px;
+    padding: 5px 7px;
+    font-size: 9px;
+  }
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Suresh Yadav home">
+      <span class="brand-mark">S</span>
+      <span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation menu"
+      aria-expanded="false" type="button">☰</button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="graphic-design.html" class="active">Graphic Design</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="content-writing.html">Content Writing</a>
+      <a href="b2b-lead-generation.html">B2B Leads</a>
+      <a href="digital-marketing-branding.html">Branding</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / Graphic Design
+      </div>
+      <div class="eyebrow">Service / Graphic Design</div>
+      <h1>Graphic Design<br><span style="color:var(--orange)">with purpose.</span></h1>
+      <p>Thoughtful visuals, clear communication and consistent design for brands that want to stand out.</p>
+      <a class="button" href="contact.html">Discuss a Project ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-intro">
+        <div class="eyebrow">Selected work / 01—15</div>
+        <h2>Designs made to<br>make an impression.</h2>
+        <p>
+          A collection of graphic design explorations, promotional creatives
+          and visual concepts. Each project demonstrates a different approach
+          to layout, typography, colour and visual communication.
+        </p>
+      </div>
+
+      <div class="portfolio-meta">
+        <span class="portfolio-count">Graphic Design Gallery</span>
+        <span class="portfolio-note">15 selected visuals · Concept portfolio</span>
+      </div>
+
+      <div class="design-gallery">
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 01</span>
+            <img src="assets/graphic-design/graphic-design-01.png" alt="Graphic design concept 01" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 01</h3>
+            <p>Graphic design exploration</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 02</span>
+            <img src="assets/graphic-design/graphic-design-02.png" alt="Graphic design concept 02" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 02</h3>
+            <p>Composition and typography</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 03</span>
+            <img src="assets/graphic-design/graphic-design-03.png" alt="Graphic design concept 03" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 03</h3>
+            <p>Creative visual communication</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 04</span>
+            <img src="assets/graphic-design/graphic-design-04.png" alt="Graphic design concept 04" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 04</h3>
+            <p>Layout and colour study</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 05</span>
+            <img src="assets/graphic-design/graphic-design-05.png" alt="Graphic design concept 05" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 05</h3>
+            <p>Promotional design exploration</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 06</span>
+            <img src="assets/graphic-design/graphic-design-06.png" alt="Graphic design concept 06" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 06</h3>
+            <p>Visual identity exploration</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 07</span>
+            <img src="assets/graphic-design/graphic-design-07.png" alt="Graphic design concept 07" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 07</h3>
+            <p>Digital creative design</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 08</span>
+            <img src="assets/graphic-design/graphic-design-08.png" alt="Graphic design concept 08" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 08</h3>
+            <p>Typography-led composition</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 09</span>
+            <img src="assets/graphic-design/graphic-design-09.png" alt="Graphic design concept 09" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 09</h3>
+            <p>Promotional visual study</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 10</span>
+            <img src="assets/graphic-design/graphic-design-10.png" alt="Graphic design concept 10" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 10</h3>
+            <p>Brand communication design</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 11</span>
+            <img src="assets/graphic-design/graphic-design-11.png" alt="Graphic design concept 11" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 11</h3>
+            <p>Social media creative study</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 12</span>
+            <img src="assets/graphic-design/graphic-design-12.png" alt="Graphic design concept 12" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 12</h3>
+            <p>Layout and visual hierarchy</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 13</span>
+            <img src="assets/graphic-design/graphic-design-13.png" alt="Roast Theory fictional coffee brand design concept" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Roast Theory</h3>
+            <p>Fictional specialty coffee brand concept</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 14</span>
+            <img src="assets/graphic-design/graphic-design-14.png" alt="Graphic design concept 14" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 14</h3>
+            <p>Creative direction exploration</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+        <article class="design-card">
+          <div class="design-image">
+            <span class="design-number">PROJECT 15</span>
+            <img src="assets/graphic-design/graphic-design-15.png" alt="Graphic design concept 15" loading="lazy">
+          </div>
+          <div class="design-info">
+            <h3>Visual Concept 15</h3>
+            <p>Graphic design exploration</p>
+            <span class="concept-label">Concept Project</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery-bottom">
+        <strong>About these projects:</strong>
+        This gallery presents design concepts for portfolio demonstration.
+        Fictional brand concepts are not client commissions.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container detail-layout">
+      <article class="detail-panel">
+        <div class="eyebrow">What I can help with</div>
+        <h2>Clear work. Thoughtful execution.</h2>
+        <p>
+          Every project starts with understanding the goal, audience and message.
+          The design is planned to be useful, easy to understand and consistent
+          with the brand.
+        </p>
+        <ul>
+          <li>Posters and advertisements</li>
+          <li>Social media creatives</li>
+          <li>Thumbnails and promotional graphics</li>
+          <li>Brand collateral</li>
+        </ul>
+      </article>
+
+      <article class="detail-panel">
+        <div class="eyebrow">Project enquiries</div>
+        <h2>Need a design for your brand?</h2>
+        <p>
+          Tell me about your business, audience and the design you need.
+          I can discuss the project scope, deliverables and pricing with you.
+        </p>
+        <a class="button" href="contact.html">Discuss Your Project ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-panel">
+      <div>
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's talk about it.</h2>
+        <p>Share your goal and what you need help with. I’ll respond by message or email.</p>
+      </div>
+      <a class="button" href="contact.html">Contact Me ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
