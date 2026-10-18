@@ -1,10 +1,291 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f1e8"><meta name="description" content="Thoughtful social content built around consistency, clarity and audience relevance."><title>Social Media Management | Suresh Yadav</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="container nav">
-<a class="brand" href="index.html" aria-label="Suresh Yadav home"><span class="brand-mark">S</span><span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-<nav class="nav-links" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="graphic-design.html" class="">Graphic Design</a><a href="social-media.html" class="active">Social Media</a><a href="content-writing.html" class="">Content Writing</a><a href="b2b-lead-generation.html" class="">B2B Leads</a><a href="digital-marketing-branding.html" class="">Branding</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
-<a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
-</div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Social Media Management</div><div class="eyebrow">Service  /  Social Media Management</div><h1>Social Media Management<br><span style="color:var(--orange)">with purpose.</span></h1><p>Thoughtful social content built around consistency, clarity and audience relevance.</p><a class="button" href="contact.html">Discuss a Project ↗</a></div></section>
-<section class="section"><div class="container detail-layout"><article class="detail-panel"><div class="eyebrow">What I can help with</div><h2>Clear work. Thoughtful execution.</h2><p>Every project starts with understanding the goal, audience and message. The deliverable is planned to be useful, easy to understand and consistent with the brand.</p><ul><li>Content calendars</li><li>Instagram feed planning</li><li>Stories and campaign concepts</li><li>Content strategy and reporting templates</li></ul></article><article class="detail-panel"><div class="eyebrow">Selected work</div><h2>Portfolio gallery</h2><p>Project samples will be added here as they are ready. No sample projects are published in this starter version.</p><div class="gallery-empty"><div class="gallery-slot"><div><span>＋</span>Project image slot 01</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 02</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 03</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 04</div></div></div></article></div></section>
-<section class="section"><div class="container contact-panel"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's talk about it.</h2><p>Share your goal and what you need help with. I’ll respond by message or email.</p></div><a class="button" href="contact.html">Contact Me ↗</a></div></section></main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/main.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f1e8">
+<meta name="description" content="Social media management portfolio by Suresh Yadav, featuring content calendars, Instagram strategy, caption planning and performance tracking concepts.">
+<title>Social Media Management Portfolio | Suresh Yadav</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+.social-intro{max-width:760px;margin-bottom:34px}
+.social-intro p{max-width:660px;line-height:1.85}
+.project-card{overflow:hidden;border:1px solid rgba(20,36,59,.13);background:#fffdf8;border-radius:6px;box-shadow:0 8px 28px rgba(20,36,59,.06)}
+.project-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:30px;background:#121318;color:#f8f7f2}
+.project-kicker{color:#c9ff43;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
+.project-hero h2{font-size:clamp(28px,4vw,46px);line-height:1.12;margin:16px 0}
+.project-hero h2 span{color:#c9ff43}
+.project-hero p{font-size:14px;line-height:1.85;color:#c4c5ca;max-width:520px}
+.project-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px;padding-top:20px;border-top:1px solid #383940}
+.meta-label{display:block;color:#a8a9b0;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.meta-value{font-size:13px;font-weight:700}
+.cover-preview{background:#202127;padding:12px;border:1px solid #373941}
+.cover-preview img{display:block;width:100%;height:auto;object-fit:contain}
+.project-details{padding:30px}
+.project-details h3{font-size:22px;margin:0 0 10px}
+.project-details>p{font-size:14px;line-height:1.85;max-width:780px}
+.slide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+.slide-card{min-width:0;border:1px solid #e4dfd5;background:#f7f4ed;border-radius:4px;overflow:hidden}
+.slide-image{display:flex;align-items:center;justify-content:center;background:#eae5db;min-height:180px}
+.slide-image img{display:block;width:100%;height:auto;object-fit:contain}
+.slide-caption{padding:14px 15px}
+.slide-caption span{display:block;color:#a34b2d;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:7px}
+.slide-caption h4{font-size:15px;margin:0 0 6px}
+.slide-caption p{font-size:12px;line-height:1.7;margin:0;opacity:.75}
+.project-outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.outcome-item{padding:17px;background:#f1eee6;border-radius:4px}
+.outcome-item strong{display:block;font-size:13px;margin-bottom:7px}
+.outcome-item p{font-size:12px;line-height:1.7;margin:0;opacity:.75}
+.project-disclaimer{margin-top:22px;padding:15px 17px;border-left:3px solid var(--orange);background:#f4f0e8;font-size:12px;line-height:1.8}
+.project-cta{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid #e1dcd2}
+.project-cta p{font-size:13px;line-height:1.7;margin:0}
+.slide-fallback{display:none;min-height:200px;padding:18px;box-sizing:border-box;text-align:center;align-items:center;justify-content:center;overflow-wrap:anywhere;color:#14243b}
+@media(max-width:760px){
+ .project-hero{grid-template-columns:1fr;padding:22px;gap:22px}
+ .project-meta{gap:8px}
+ .project-details{padding:20px}
+ .slide-grid{grid-template-columns:1fr}
+ .project-outcomes{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Suresh Yadav home">
+      <span class="brand-mark">S</span>
+      <span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="graphic-design.html">Graphic Design</a>
+      <a href="social-media.html" class="active">Social Media</a>
+      <a href="content-writing.html">Content Writing</a>
+      <a href="b2b-lead-generation.html">B2B Leads</a>
+      <a href="digital-marketing-branding.html">Branding</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Social Media Management</div>
+    <div class="eyebrow">Service / Social Media Management</div>
+    <h1>Social Media Management<br><span style="color:var(--orange)">with purpose.</span></h1>
+    <p>Content planning, clear messaging and consistent publishing built around audience relevance and business goals.</p>
+    <a class="button" href="contact.html">Discuss a Project ↗</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="social-intro">
+      <div class="eyebrow">Selected Work / Project 01</div>
+      <h2>Strategy before<br>the scroll.</h2>
+      <p>
+        A structured seven-day Instagram content plan for a fictional fitness
+        brand. This project brings together audience positioning, content
+        pillars, publishing ideas, captions, calls to action and a performance
+        tracking framework in one cohesive presentation.
+      </p>
+    </div>
+
+    <article class="project-card">
+      <div class="project-hero">
+        <div>
+          <div class="project-kicker">Social Media Management / 01</div>
+          <h2>Seven days.<br>One clear content <span>rhythm.</span></h2>
+          <p>
+            A practical content planning concept designed to balance reach,
+            useful fitness education, community interaction and trial-session
+            enquiries throughout the week.
+          </p>
+
+          <div class="project-meta">
+            <div>
+              <span class="meta-label">Duration</span>
+              <span class="meta-value">7 Days</span>
+            </div>
+            <div>
+              <span class="meta-label">Brand</span>
+              <span class="meta-value">Volt Athletics</span>
+            </div>
+            <div>
+              <span class="meta-label">Project type</span>
+              <span class="meta-value">Concept</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-preview">
+          <img src="assets/social-media/project-01-content-calendar/01-cover.png"
+               alt="Seven-day Instagram content calendar project cover"
+               loading="eager">
+        </div>
+      </div>
+
+      <div class="project-details">
+        <div class="eyebrow">Inside the project</div>
+        <h3>From planning to performance tracking.</h3>
+        <p>
+          Five coordinated slides explain the strategy behind the weekly
+          publishing plan, from defining the audience to writing captions and
+          deciding which metrics to review. Together, they show the planning
+          process rather than a collection of unrelated graphics.
+        </p>
+
+        <div class="slide-grid">
+
+          <article class="slide-card">
+            <div class="slide-image">
+              <img src="assets/social-media/project-01-content-calendar/01-cover.png"
+                   alt="Slide 1: Seven-day Instagram content calendar cover"
+                   loading="lazy">
+            </div>
+            <div class="slide-caption">
+              <span>Slide 01 / Project Overview</span>
+              <h4>Content Calendar Overview</h4>
+              <p>Introduces the project, the seven-day timeframe and the overall content planning approach.</p>
+            </div>
+          </article>
+
+          <article class="slide-card">
+            <div class="slide-image">
+              <img src="assets/social-media/project-01-content-calendar/02-strategy.png"
+                   alt="Slide 2: Volt Athletics audience, goals and content pillars"
+                   loading="lazy">
+            </div>
+            <div class="slide-caption">
+              <span>Slide 02 / Strategy</span>
+              <h4>Audience & Content Pillars</h4>
+              <p>Defines the fictional fitness audience, primary goal, tone of voice and four content pillars: education, motivation, community and promotion.</p>
+            </div>
+          </article>
+
+          <article class="slide-card">
+            <div class="slide-image">
+              <img src="assets/social-media/project-01-content-calendar/03-content-calendar.png"
+                   alt="Slide 3: Seven-day content calendar table"
+                   loading="lazy">
+            </div>
+            <div class="slide-caption">
+              <span>Slide 03 / Weekly Plan</span>
+              <h4>Seven-Day Publishing Calendar</h4>
+              <p>Maps each day's format, topic, objective and call to action across Reels, carousels, static posts and Stories.</p>
+            </div>
+          </article>
+
+          <article class="slide-card">
+            <div class="slide-image">
+              <img src="assets/social-media/project-01-content-calendar/04-caption-plan.png"
+                   alt="Slide 4: Caption examples and publishing recommendations"
+                   loading="lazy">
+            </div>
+            <div class="slide-caption">
+              <span>Slide 04 / Execution</span>
+              <h4>Captions & Publishing Plan</h4>
+              <p>Provides example captions, relevant hashtags, calls to action and suggested starting times to test against audience insights.</p>
+            </div>
+          </article>
+
+          <article class="slide-card">
+            <div class="slide-image">
+              <img src="assets/social-media/project-01-content-calendar/05-performance-tracker.png"
+                   alt="Slide 5: Weekly social media performance tracker"
+                   loading="lazy">
+            </div>
+            <div class="slide-caption">
+              <span>Slide 05 / Measurement</span>
+              <h4>Performance Tracking Framework</h4>
+              <p>Sets out a blank weekly tracker for reach, engaged accounts, saves, shares, profile visits and enquiries, alongside a deliverables checklist.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="project-outcomes">
+          <div class="outcome-item">
+            <strong>Consistent Publishing</strong>
+            <p>A repeatable seven-day schedule with a planned mix of content formats.</p>
+          </div>
+          <div class="outcome-item">
+            <strong>Purposeful Content</strong>
+            <p>Each planned post has an objective and a relevant next action for the audience.</p>
+          </div>
+          <div class="outcome-item">
+            <strong>Measurement Ready</strong>
+            <p>A simple framework to record real performance data and improve future content.</p>
+          </div>
+        </div>
+
+        <div class="project-disclaimer">
+          <strong>Concept project disclosure:</strong>
+          Volt Athletics is a fictional brand. This is a portfolio demonstration;
+          no live campaign, client engagement or performance results are claimed.
+        </div>
+
+        <div class="project-cta">
+          <p><strong>Need a content plan for your business?</strong><br>Let's discuss your audience, goals and publishing requirements.</p>
+          <a class="button" href="contact.html">Discuss a Project ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container detail-layout">
+    <article class="detail-panel">
+      <div class="eyebrow">What I can help with</div>
+      <h2>Consistent content. Clear direction.</h2>
+      <p>Social media planning focused on useful content, consistent messaging and organised execution.</p>
+      <ul>
+        <li>Content calendars and publishing plans</li>
+        <li>Instagram feed and Stories planning</li>
+        <li>Captions, hooks and calls to action</li>
+        <li>Content strategy and reporting templates</li>
+      </ul>
+    </article>
+    <article class="detail-panel">
+      <div class="eyebrow">Work together</div>
+      <h2>Let's plan your next campaign.</h2>
+      <p>Share your brand, audience and goals. We can discuss suitable deliverables and the project scope.</p>
+      <a class="button" href="contact.html">Start a Conversation ↗</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-panel">
+    <div>
+      <div class="eyebrow">Have a project in mind?</div>
+      <h2>Let's talk about it.</h2>
+      <p>Share your goal and what you need help with. I’ll respond by message or email.</p>
+    </div>
+    <a class="button" href="contact.html">Contact Me ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/main.js"></script>
+</body>
+  </html>
