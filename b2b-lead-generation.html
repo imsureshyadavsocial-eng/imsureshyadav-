@@ -1,10 +1,227 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f1e8"><meta name="description" content="Structured prospect research and outreach frameworks designed to support focused B2B prospecting."><title>B2B Lead Generation | Suresh Yadav</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="container nav">
-<a class="brand" href="index.html" aria-label="Suresh Yadav home"><span class="brand-mark">S</span><span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-<nav class="nav-links" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="graphic-design.html" class="">Graphic Design</a><a href="social-media.html" class="">Social Media</a><a href="content-writing.html" class="">Content Writing</a><a href="b2b-lead-generation.html" class="active">B2B Leads</a><a href="digital-marketing-branding.html" class="">Branding</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
-<a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
-</div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / B2B Lead Generation</div><div class="eyebrow">Service  /  B2B Lead Generation</div><h1>B2B Lead Generation<br><span style="color:var(--orange)">with purpose.</span></h1><p>Structured prospect research and outreach frameworks designed to support focused B2B prospecting.</p><a class="button" href="contact.html">Discuss a Project ↗</a></div></section>
-<section class="section"><div class="container detail-layout"><article class="detail-panel"><div class="eyebrow">What I can help with</div><h2>Clear work. Thoughtful execution.</h2><p>Every project starts with understanding the goal, audience and message. The deliverable is planned to be useful, easy to understand and consistent with the brand.</p><ul><li>Ideal Customer Profile (ICP)</li><li>Prospect research spreadsheets</li><li>Lead qualification criteria</li><li>Email and LinkedIn outreach templates</li></ul></article><article class="detail-panel"><div class="eyebrow">Selected work</div><h2>Portfolio gallery</h2><p>Project samples will be added here as they are ready. No sample projects are published in this starter version.</p><div class="gallery-empty"><div class="gallery-slot"><div><span>＋</span>Project image slot 01</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 02</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 03</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 04</div></div></div></article></div></section>
-<section class="section"><div class="container contact-panel"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's talk about it.</h2><p>Share your goal and what you need help with. I’ll respond by message or email.</p></div><a class="button" href="contact.html">Contact Me ↗</a></div></section></main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/main.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="B2B prospect research, ideal customer profiling, lead qualification and outreach portfolio projects by Suresh Yadav.">
+  <title>B2B Lead Generation | Suresh Yadav</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .b2b-project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .b2b-project-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      background: #fffdf8;
+      border: 1px solid rgba(20,36,59,.12);
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .b2b-project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(20,36,59,.10);
+    }
+    .b2b-project-card:focus-visible {
+      outline: 3px solid #e65c32;
+      outline-offset: 4px;
+    }
+    .b2b-cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #e9e4d9;
+    }
+    .b2b-card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 22px;
+    }
+    .b2b-number {
+      margin-bottom: 10px;
+      color: #e65c32;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .b2b-card-content h3 {
+      margin: 0 0 12px;
+      line-height: 1.35;
+    }
+    .b2b-card-content p {
+      margin: 0 0 18px;
+      line-height: 1.7;
+    }
+    .b2b-open-link {
+      margin-top: auto;
+      color: #14243b;
+      font-weight: 700;
+    }
+    .b2b-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-left: 3px solid #e65c32;
+      background: rgba(255,255,255,.55);
+      line-height: 1.7;
+    }
+    @media (max-width: 850px) {
+      .b2b-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .b2b-project-grid { grid-template-columns: 1fr; }
+      .b2b-card-content { padding: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Suresh Yadav home">
+      <span class="brand-mark">S</span>
+      <span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="graphic-design.html">Graphic Design</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="content-writing.html">Content Writing</a>
+      <a href="b2b-lead-generation.html" class="active">B2B Leads</a>
+      <a href="digital-marketing-branding.html">Branding</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / B2B Lead Generation</div>
+      <div class="eyebrow">Service / B2B Lead Generation</div>
+      <h1>B2B Lead Generation<br><span style="color:var(--orange)">with purpose.</span></h1>
+      <p>Structured prospect research, customer profiling and outreach frameworks designed to support focused B2B prospecting.</p>
+      <a class="button" href="contact.html">Discuss a Project ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Selected work</div>
+      <h2>Research. Qualify. Reach out.</h2>
+      <p>Explore the three B2B portfolio projects below. Select any cover to open its project page and view the available deliverables.</p>
+
+      <div class="b2b-project-grid">
+
+        <!-- PROJECT 01 -->
+        <a class="b2b-project-card" href="b2b-lead-generation-project-01.html" aria-label="Open Project 01: B2B Prospect Research Database">
+          <img
+            class="b2b-cover"
+            src="assets/b2b-lead-generation/B2B_01_Lead_Research_Dashboard.png"
+            alt="B2B Prospect Research Database dashboard cover"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='assets/b2b-lead-generation/B2B_01_Lead_Research_Dashboard.png';">
+          <div class="b2b-card-content">
+            <span class="b2b-number">Project 01</span>
+            <h3>B2B Prospect Research Database</h3>
+            <p>A structured prospect research workbook with sample records, qualification fields and a dashboard preview.</p>
+            <span class="b2b-open-link">View Project Details ↗</span>
+          </div>
+        </a>
+
+        <!-- PROJECT 02 -->
+        <a class="b2b-project-card" href="b2b-lead-generation-project-02.html" aria-label="Open Project 02: Ideal Customer Profile and Prospect Qualification">
+          <img
+            class="b2b-cover"
+            src="assets/b2b-lead-generation/B2B_02_ICP_Cover.png"
+            alt="Ideal Customer Profile and Prospect Qualification cover"
+            loading="lazy">
+          <div class="b2b-card-content">
+            <span class="b2b-number">Project 02</span>
+            <h3>Ideal Customer Profile & Prospect Qualification</h3>
+            <p>An ICP framework and scoring approach for evaluating how closely prospects match a target customer profile.</p>
+            <span class="b2b-open-link">View Project Details ↗</span>
+          </div>
+        </a>
+
+        <!-- PROJECT 03 -->
+        <a class="b2b-project-card" href="b2b-lead-generation-project-03.html" aria-label="Open Project 03: B2B Cold Email and LinkedIn Outreach Framework">
+          <img
+            class="b2b-cover"
+            src="assets/b2b-lead-generation/B2B_03_Outreach_Sequence.png"
+            alt="B2B Cold Email and LinkedIn Outreach Sequence cover"
+            loading="lazy">
+          <div class="b2b-card-content">
+            <span class="b2b-number">Project 03</span>
+            <h3>B2B Cold Email & LinkedIn Outreach Framework</h3>
+            <p>A sample outreach sequence with messaging frameworks and a prospect follow-up tracker.</p>
+            <span class="b2b-open-link">View Project Details ↗</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="b2b-note">
+        <strong>Portfolio note:</strong> These are portfolio demonstration projects. Sample data and fictional examples are used where applicable; they are not claims of completed client campaigns or verified business results.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container detail-layout">
+      <article class="detail-panel">
+        <div class="eyebrow">What I can help with</div>
+        <h2>Clear research. Practical systems.</h2>
+        <p>Every project starts with understanding the target market, ideal customer and outreach objective.</p>
+        <ul>
+          <li>B2B prospect research</li>
+          <li>Ideal Customer Profile (ICP)</li>
+          <li>Lead qualification criteria</li>
+          <li>Prospect tracking spreadsheets</li>
+          <li>Cold email and LinkedIn outreach templates</li>
+        </ul>
+      </article>
+
+      <article class="detail-panel">
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's talk about it.</h2>
+        <p>Share your target industry, ideal customers and project requirements. I’ll respond by message or email.</p>
+        <a class="button" href="contact.html">Contact Me ↗</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
