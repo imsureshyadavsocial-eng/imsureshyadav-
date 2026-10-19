@@ -1,10 +1,368 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f1e8"><meta name="description" content="Clear, useful copy for websites, social channels and content marketing."><title>Content Writing | Suresh Yadav</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="container nav">
-<a class="brand" href="index.html" aria-label="Suresh Yadav home"><span class="brand-mark">S</span><span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-<nav class="nav-links" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="graphic-design.html" class="">Graphic Design</a><a href="social-media.html" class="">Social Media</a><a href="content-writing.html" class="active">Content Writing</a><a href="b2b-lead-generation.html" class="">B2B Leads</a><a href="digital-marketing-branding.html" class="">Branding</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
-<a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
-</div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Content Writing</div><div class="eyebrow">Service  /  Content Writing</div><h1>Content Writing<br><span style="color:var(--orange)">with purpose.</span></h1><p>Clear, useful copy for websites, social channels and content marketing.</p><a class="button" href="contact.html">Discuss a Project ↗</a></div></section>
-<section class="section"><div class="container detail-layout"><article class="detail-panel"><div class="eyebrow">What I can help with</div><h2>Clear work. Thoughtful execution.</h2><p>Every project starts with understanding the goal, audience and message. The deliverable is planned to be useful, easy to understand and consistent with the brand.</p><ul><li>Social captions</li><li>Website copy</li><li>Blog articles</li><li>Brand voice and messaging</li></ul></article><article class="detail-panel"><div class="eyebrow">Selected work</div><h2>Portfolio gallery</h2><p>Project samples will be added here as they are ready. No sample projects are published in this starter version.</p><div class="gallery-empty"><div class="gallery-slot"><div><span>＋</span>Project image slot 01</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 02</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 03</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 04</div></div></div></article></div></section>
-<section class="section"><div class="container contact-panel"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's talk about it.</h2><p>Share your goal and what you need help with. I’ll respond by message or email.</p></div><a class="button" href="contact.html">Contact Me ↗</a></div></section></main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/main.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Content writing portfolio by Suresh Yadav featuring social media captions, website copywriting and SEO blog articles.">
+  <title>Content Writing | Suresh Yadav</title>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    .cw-intro {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .cw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .cw-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(20,36,59,.12);
+      border-radius: 16px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .cw-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(20,36,59,.1);
+    }
+
+    .cw-image-link {
+      display: block;
+      background: #14243b;
+      overflow: hidden;
+    }
+
+    .cw-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform .25s ease;
+    }
+
+    .cw-card:hover .cw-image {
+      transform: scale(1.025);
+    }
+
+    .cw-card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 22px;
+    }
+
+    .cw-project-number {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .cw-card h3 {
+      margin: 12px 0;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    .cw-card p {
+      margin: 0 0 18px;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .cw-category {
+      margin-bottom: 22px;
+      padding: 7px 10px;
+      border-radius: 5px;
+      background: #f5f1e8;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .cw-project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding: 12px 15px;
+      border-radius: 6px;
+      background: var(--navy, #14243b);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cw-project-link:hover {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .cw-disclaimer {
+      margin-top: 32px;
+      padding: 20px;
+      border-left: 4px solid var(--orange);
+      background: #fff;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 900px) {
+      .cw-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cw-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cw-card h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="index.html" aria-label="Suresh Yadav home">
+      <span class="brand-mark">S</span>
+      <span>SURESH YADAV
+        <small>CREATIVE & DIGITAL SERVICES</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      type="button">☰</button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="graphic-design.html">Graphic Design</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="content-writing.html" class="active">Content Writing</a>
+      <a href="b2b-lead-generation.html">B2B Leads</a>
+      <a href="digital-marketing-branding.html">Branding</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">
+      Start a Project <span>↗</span>
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / Content Writing
+      </div>
+
+      <div class="eyebrow">Service / Content Writing</div>
+
+      <h1>
+        Content Writing<br>
+        <span style="color:var(--orange)">with purpose.</span>
+      </h1>
+
+      <p>
+        Clear, useful copy for websites, social channels and content
+        marketing. Explore the writing samples below.
+      </p>
+
+      <a class="button" href="contact.html">Discuss a Project ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="cw-intro">
+        <div class="eyebrow">Selected work / 03 projects</div>
+        <h2>Writing built around a clear message.</h2>
+        <p>
+          Explore three portfolio concepts covering social media captions,
+          website copywriting and SEO blog writing. Select any project to
+          view its details.
+        </p>
+      </div>
+
+      <div class="cw-grid">
+
+        <!-- PROJECT 01: SOCIAL MEDIA CAPTION PACK -->
+        <article class="cw-card">
+
+          <a class="cw-image-link"
+             href="content-writing-project-01.html"
+             aria-label="Open Project 01: Social Media Caption Pack">
+
+            <img
+              class="cw-image"
+              src="assets/Content%20writing/CW_01_Volt_Caption_Pack_Page_01.png"
+              alt="VOLT ATHLETICS social media caption pack portfolio preview"
+              loading="lazy">
+          </a>
+
+          <div class="cw-card-content">
+            <span class="cw-project-number">PROJECT 01</span>
+
+            <h3>15 Social Media Captions for a Fitness Brand</h3>
+
+            <p>
+              A fitness content sample demonstrating engaging captions,
+              promotional messaging and calls to action.
+            </p>
+
+            <span class="cw-category">Social Media Content Writing</span>
+
+            <a class="cw-project-link"
+               href="content-writing-project-01.html">
+              View Project <span>↗</span>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 02: WEBSITE COPYWRITING -->
+        <article class="cw-card">
+
+          <a class="cw-image-link"
+             href="content-writing-project-02.html"
+             aria-label="Open Project 02: Website Copywriting">
+
+            <img
+              class="cw-image"
+              src="assets/Content%20writing/CW_02_Northframe_Cover.png"
+              alt="NORTHFRAME STUDIO website copywriting portfolio cover"
+              loading="lazy">
+          </a>
+
+          <div class="cw-card-content">
+            <span class="cw-project-number">PROJECT 02</span>
+
+            <h3>Website Copywriting — 3-Page Website</h3>
+
+            <p>
+              A fictional creative agency website copy concept focused on
+              brand messaging, service pages and clear communication.
+            </p>
+
+            <span class="cw-category">Website Copywriting</span>
+
+            <a class="cw-project-link"
+               href="content-writing-project-02.html">
+              View Project <span>↗</span>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 03: SEO BLOG ARTICLE -->
+        <article class="cw-card">
+
+          <a class="cw-image-link"
+             href="content-writing-project-03.html"
+             aria-label="Open Project 03: SEO Blog Article">
+
+            <img
+              class="cw-image"
+              src="assets/Content%20writing/CW_03_Volt_SEO_Blog_Cover.png"
+              alt="VOLT ATHLETICS SEO blog article portfolio cover"
+              loading="lazy">
+          </a>
+
+          <div class="cw-card-content">
+            <span class="cw-project-number">PROJECT 03</span>
+
+            <h3>7 Practical Ways to Build a Consistent Fitness Routine</h3>
+
+            <p>
+              An SEO blog writing sample with a reader-friendly structure,
+              practical guidance and search-focused content.
+            </p>
+
+            <span class="cw-category">SEO Blog Writing</span>
+
+            <a class="cw-project-link"
+               href="content-writing-project-03.html">
+              View Project <span>↗</span>
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="cw-disclaimer">
+        <strong>Portfolio concept disclosure:</strong>
+        VOLT ATHLETICS and NORTHFRAME STUDIO are fictional brands created
+        for portfolio demonstration. These samples do not claim actual
+        client engagements or verified business results.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-panel">
+      <div>
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's talk about it.</h2>
+        <p>
+          Share your content requirements and project goals.
+          I’ll respond by message or email.
+        </p>
+      </div>
+
+      <a class="button" href="contact.html">Contact Me ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+
+    <span>
+      © <span data-year></span> Suresh Yadav · Freelance Portfolio
+    </span>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/imsureshyadavsocial-eng"
+         target="_blank"
+         rel="noopener">GitHub ↗</a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/main.js"></script>
+
+</body>
+</html>
