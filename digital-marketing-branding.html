@@ -1,10 +1,165 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f1e8"><meta name="description" content="Brand foundations and practical marketing plans that help businesses communicate consistently."><title>Digital Marketing & Branding | Suresh Yadav</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="container nav">
-<a class="brand" href="index.html" aria-label="Suresh Yadav home"><span class="brand-mark">S</span><span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-<nav class="nav-links" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="graphic-design.html" class="">Graphic Design</a><a href="social-media.html" class="">Social Media</a><a href="content-writing.html" class="">Content Writing</a><a href="b2b-lead-generation.html" class="">B2B Leads</a><a href="digital-marketing-branding.html" class="active">Branding</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
-<a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
-</div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Digital Marketing & Branding</div><div class="eyebrow">Service  /  Digital Marketing & Branding</div><h1>Digital Marketing & Branding<br><span style="color:var(--orange)">with purpose.</span></h1><p>Brand foundations and practical marketing plans that help businesses communicate consistently.</p><a class="button" href="contact.html">Discuss a Project ↗</a></div></section>
-<section class="section"><div class="container detail-layout"><article class="detail-panel"><div class="eyebrow">What I can help with</div><h2>Clear work. Thoughtful execution.</h2><p>Every project starts with understanding the goal, audience and message. The deliverable is planned to be useful, easy to understand and consistent with the brand.</p><ul><li>Brand identity direction</li><li>Brand positioning and messaging</li><li>Content strategy</li><li>Campaign planning frameworks</li></ul></article><article class="detail-panel"><div class="eyebrow">Selected work</div><h2>Portfolio gallery</h2><p>Project samples will be added here as they are ready. No sample projects are published in this starter version.</p><div class="gallery-empty"><div class="gallery-slot"><div><span>＋</span>Project image slot 01</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 02</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 03</div></div><div class="gallery-slot"><div><span>＋</span>Project image slot 04</div></div></div></article></div></section>
-<section class="section"><div class="container contact-panel"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's talk about it.</h2><p>Share your goal and what you need help with. I’ll respond by message or email.</p></div><a class="button" href="contact.html">Contact Me ↗</a></div></section></main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/main.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Brand identity, positioning, messaging and digital marketing campaign portfolio projects by Suresh Yadav.">
+  <title>Digital Marketing & Branding | Suresh Yadav</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .branding-projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .branding-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(20,36,59,.14);
+      border-radius: 16px;
+      background: #fffdf8;
+      color: #14243b;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .branding-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(20,36,59,.12);
+    }
+    .branding-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #e8e2d8;
+    }
+    .branding-card-content { padding: 22px; }
+    .branding-card .eyebrow { margin-bottom: 10px; }
+    .branding-card h3 { margin: 0 0 12px; line-height: 1.3; }
+    .branding-card p { margin: 0 0 18px; }
+    .branding-card-link {
+      display: inline-block;
+      color: var(--orange, #e65c32);
+      font-weight: 700;
+    }
+    .concept-note {
+      margin-top: 24px;
+      font-size: .9rem;
+      opacity: .8;
+    }
+    @media (max-width: 850px) {
+      .branding-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .branding-projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Suresh Yadav home">
+      <span class="brand-mark">S</span>
+      <span>SURESH YADAV<small>CREATIVE & DIGITAL SERVICES</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="graphic-design.html">Graphic Design</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="content-writing.html">Content Writing</a>
+      <a href="b2b-lead-generation.html">B2B Leads</a>
+      <a href="digital-marketing-branding.html" class="active">Branding</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="nav-cta" href="contact.html">Start a Project <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Digital Marketing & Branding</div>
+      <div class="eyebrow">Service / Digital Marketing & Branding</div>
+      <h1>Digital Marketing & Branding<br><span style="color:var(--orange)">with purpose.</span></h1>
+      <p>Brand identity, strategic messaging and practical campaign planning concepts for businesses.</p>
+      <a class="button" href="contact.html">Discuss a Project ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Selected work</div>
+      <h2>Branding & marketing projects</h2>
+      <p>Explore the project objectives, deliverables and downloadable previews. Select any project to open its details.</p>
+
+      <div class="branding-projects">
+        <a class="branding-card" href="digital-marketing-project-01.html">
+          <img src="assets/Branding/Project%201/MAISON_FABLE_Website_Cover_1200x900.png"
+               alt="MAISON FABLE brand identity project cover" loading="lazy">
+          <div class="branding-card-content">
+            <div class="eyebrow">Project 01 · Brand Identity</div>
+            <h3>MAISON FABLE — Brand Identity Kit</h3>
+            <p>A premium visual identity concept for a home fragrance and lifestyle brand.</p>
+            <span class="branding-card-link">View Project ↗</span>
+          </div>
+        </a>
+
+        <a class="branding-card" href="digital-marketing-project-02.html">
+          <img src="assets/Branding/Project%202/Website_Cover_1200x900.png"
+               alt="NORTHFRAME STUDIO brand positioning project cover" loading="lazy">
+          <div class="branding-card-content">
+            <div class="eyebrow">Project 02 · Brand Strategy</div>
+            <h3>NORTHFRAME STUDIO — Brand Positioning & Messaging</h3>
+            <p>A positioning, audience and messaging framework for a creative agency concept.</p>
+            <span class="branding-card-link">View Project ↗</span>
+          </div>
+        </a>
+
+        <a class="branding-card" href="digital-marketing-project-03.html">
+          <img src="assets/Branding/Project%203/VOLT_ATHLETICS_Campaign_Cover_1200x900.png"
+               alt="VOLT ATHLETICS digital marketing campaign cover" loading="lazy">
+          <div class="branding-card-content">
+            <div class="eyebrow">Project 03 · Campaign Planning</div>
+            <h3>VOLT ATHLETICS — 30-Day Marketing Campaign</h3>
+            <p>A sample monthly campaign plan with a content calendar and planning spreadsheet.</p>
+            <span class="branding-card-link">View Project ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <p class="concept-note">Portfolio disclosure: These are fictional, self-initiated concept projects created to demonstrate planning and design skills. They are not presented as paid client work or verified campaign results.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-panel">
+      <div>
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's talk about it.</h2>
+        <p>Share your goal and what you need help with. I’ll respond by message or email.</p>
+      </div>
+      <a class="button" href="contact.html">Contact Me ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span data-year></span> Suresh Yadav · Freelance Portfolio</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/imsureshyadavsocial-eng" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
